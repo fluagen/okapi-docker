@@ -14,4 +14,4 @@ WORKDIR /app
 
 # start okapi service
 
-CMD /app/init.d/init.sh && /app/start.sh
+CMD /app/start.sh
