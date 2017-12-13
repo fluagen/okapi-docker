@@ -1,9 +1,17 @@
-FROM postgres
+FROM mcpayment/ubuntu-java8
 
-COPY ./init.d/ /app/init.d/
+
+# deploy okapi
+
 COPY ./repo/ /app/repo/
-COPY ./init.sh /docker-entrypoint-initdb.d/init.sh
+COPY ./init.sh /app/init.d/init.sh
+COPY ./start.sh /app/start.sh
+
+RUN chmod -R 777 /app/init.d/* && \ 
+	chmod 777 /app/start.sh
 
 WORKDIR /app
 
-CMD ["postgres"]
+# start okapi service
+
+CMD /app/init.d/init.sh && /app/start.sh

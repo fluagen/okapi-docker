@@ -1,0 +1,21 @@
+version: '3'
+services:
+  okapi:
+    build: .
+    ports:
+      - 9130:9130
+    container_name: openapi
+    depends_on:
+      - postgres
+      - redis
+    links:
+      - postgres
+      - redis
+  postgres:
+    image: "postgres"
+    volumes:
+      - "./db/:/docker-entrypoint-initdb.d/"
+    environment:
+      POSTGRES_PASSWORD: 111111
+  redis:
+    image: "redis:alpine"
