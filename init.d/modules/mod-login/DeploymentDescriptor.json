@@ -1,0 +1,7 @@
+{
+  "srvcId": "mod-login-4.0.1-SNAPSHOT",
+  "nodeId": "localhost",
+  "descriptor": {
+    "exec": "java -Dport=%p -jar /app/repo/mod-login/mod-login-fat.jar -Dhttp.port=%p"
+  }
+}

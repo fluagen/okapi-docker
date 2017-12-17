@@ -5,6 +5,9 @@ services:
     ports:
       - 9130:9130
     container_name: openapi
+    volumes:
+      - ./repo:/app/repo
+      - ./init.d:/app/init.d
     depends_on:
       - postgres
       - redis
