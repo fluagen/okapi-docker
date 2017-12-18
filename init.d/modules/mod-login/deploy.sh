@@ -1,7 +1,6 @@
 #!/bin/bash
-tenant="testlib"
-module_id="mod-login-4.0.1-SNAPSHOT"
-service_id="mod-login-4.0.1-SNAPSHOT"
+module_id=$mod_login_version
+service_id=$mod_login_version
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
@@ -15,7 +14,7 @@ if test $http_code -eq 200;then
 else
 	echo "The $module_id start announcement";
 	curl -X POST -s \
-	     -H "Content-type:application/type" \
+	     -H "Content-type:application/json" \
 	     -d @$DIR/ModuleDescriptor.json \
 	     http://localhost:9130/_/proxy/modules
 fi
@@ -28,7 +27,7 @@ if test $http_code -eq 200;then
 else
 	echo "The $module_id start deploy";
 	curl -X POST -s \
-	     -H "Content-type:application/type" \
+	     -H "Content-type:application/json" \
 	     -d @$DIR/DeploymentDescriptor.json \
 	     http://localhost:9130/_/discovery/modules
 fi
@@ -41,11 +40,10 @@ if test $http_code -eq 200;then
 else
 	echo "Enable the $module_id for $tenant";
 	curl -X POST -s \
-	     -H "Content-type:application/type" \
+	     -H "Content-type:application/json" \
 	     -d "{\"id\":\"$module_id\"}" \
 	     http://localhost:9130/_/proxy/tenants/${tenant}/modules
 fi
-
 
 
 
