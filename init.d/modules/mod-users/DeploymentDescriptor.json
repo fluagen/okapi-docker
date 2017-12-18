@@ -1,0 +1,7 @@
+{
+  "srvcId": "mod-users-14.3.0-SNAPSHOT",
+  "nodeId": "localhost",
+  "descriptor": {
+    "exec": "java -jar /app/repo/mod-users/mod-users-fat.jar -Dhttp.port=%p"
+  }
+}
