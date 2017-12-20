@@ -1,0 +1,7 @@
+{
+  "srvcId": "mod-authtoken-1.1.1-SNAPSHOT",
+  "nodeId": "localhost",
+  "descriptor": {
+    "exec": "java -jar /app/repo/mod-authtoken/mod-authtoken-fat.jar -Dport=%p"
+  }
+}

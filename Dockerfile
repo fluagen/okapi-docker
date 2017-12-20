@@ -19,4 +19,6 @@ WORKDIR /app
 
 # start okapi service
 
-CMD /app/start.sh
+EXPOSE 9130
+
+ENTRYPOINT ["./start.sh"]
