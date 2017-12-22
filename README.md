@@ -57,8 +57,9 @@ This user admin/admin is  initialized for administrator.
 ## How to extend this image
 
 1. copy your module to current local repo directory.
-2. request okapi rest service api for registe module and deploy module.
-3. enable the module for tenant testlib.
+2. edit deploy script refer to `./init.d/modules/mod-login/deploy.sh` .
+3. copy your deploy script, ModuleDescriptor.json, DeploymentDescriptor.json to `./init.d/modules/${module name}/` directory.
+4. modify start.sh add your module info.
 
 ### notice
 
