@@ -10,7 +10,7 @@ Basic working modules：
 * mod-permissions
 * mod-authtoken
 
-At the moment,The docker was tested through, in the following modules version:
+At the moment,The docker was tested through in the following modules version:
 
 | module          | version |
 |-----------------|---------|
@@ -57,7 +57,7 @@ This user admin/admin is  initialized for administrator.
 ## How to extend this image
 
 1. copy your module to current local repo directory.
-2. registe module and deploy module request okapi rest service.
+2. request okapi rest service api for registe module and deploy module.
 3. enable the module for tenant testlib.
 
 ### notice
