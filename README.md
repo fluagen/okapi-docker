@@ -47,11 +47,24 @@ remove :
 make remove
 ```
 
-### Default init data
+### Default initialized data
 
 The default tenant is testlib.
 
-This user admin/admin is  initialized, his role is the administrator.
+This user admin/admin is  initialized for administrator.
+
+
+## How to extend this image
+
+1. copy your module to current local repo directory.
+2. registe module and deploy module request okapi rest service.
+3. enable the module for tenant testlib.
+
+### notice
+
+when deploy module, exec fat jar's path like to `/app/repo/mod-authtoken/mod-authtoken-fat.jar`.
+
+
 
 
 
