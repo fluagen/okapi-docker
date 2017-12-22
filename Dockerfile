@@ -1,10 +1,4 @@
-FROM mcpayment/ubuntu-java8
-
-
-RUN apt-get update && \
-    apt-get install -y curl && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists
+FROM fluagen/ubuntu-java8
 
 # deploy okapi
 

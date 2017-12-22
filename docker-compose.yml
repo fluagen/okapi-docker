@@ -1,10 +1,10 @@
 version: '3'
 services:
-  openapi:
+  okapi:
     build: .
     ports:
       - 9130:9130
-    container_name: openapi
+    container_name: okapi
     volumes:
       - ./repo:/app/repo
       - ./init.d:/app/init.d
@@ -19,7 +19,6 @@ services:
     volumes:
       - ./db/init.d/:/docker-entrypoint-initdb.d/
     #   - ./db/pgdata:/var/lib/postgresql/data
-    container_name: postgres
     ports:
       - 5432:5432
     environment:
@@ -27,4 +26,3 @@ services:
       PGDATA: /var/lib/postgresql/data/pgdata
   redis:
     image: "redis:alpine"
-    container_name: redis

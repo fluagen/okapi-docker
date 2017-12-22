@@ -8,6 +8,7 @@ export mod_permissions_version="mod-permissions-5.0.1-SNAPSHOT"
 export mod_authtoken_version="mod-authtoken-1.1.1-SNAPSHOT"
 
 sleep 3
+echo 
 echo "start up okapi service"
 
 postgres_db_init=0
@@ -27,6 +28,7 @@ while ! echo exit | nc localhost 9130; do
 	sleep 1;
 done
 
+echo 
 echo "start deploy modules"
 
 source /app/init.d/tenant/init-tenant.sh
@@ -35,6 +37,7 @@ source /app/init.d/modules/mod-permissions/deploy.sh
 source /app/init.d/modules/mod-users/deploy.sh
 source /app/init.d/modules/mod-authtoken/deploy.sh
 
+echo 
 echo "finish deploy modules"
 
 while true; do
