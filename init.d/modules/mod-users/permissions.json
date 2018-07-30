@@ -1,9 +1,9 @@
 {
   "userId":"7261ecaae3a74dc68b468e12a70b1aec",
   "permissions":[
-    "notify.all",
+  	"perms.all",
+  	"login.all",
     "users.all",
-    "login.all",
-    "perms.all"
+    "users-bl.all"
     ]
 }

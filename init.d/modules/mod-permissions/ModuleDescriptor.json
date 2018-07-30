@@ -1,10 +1,10 @@
 {
-  "id": "mod-permissions-5.0.1-SNAPSHOT",
+  "id": "mod-permissions-5.3.0-SNAPSHOT",
   "name": "permissions",
   "provides": [
     {
       "id": "permissions",
-      "version": "5.0",
+      "version": "5.2",
       "handlers" : [
         {
           "methods": [ "POST" ],
@@ -156,6 +156,12 @@
       ]
     }
 
-  ]
-
+  ],
+  "launchDescriptor": {
+    "dockerImage": "mod-permissions:5.3.0-SNAPSHOT",
+    "dockerArgs": {
+      "HostConfig": { "PortBindings": { "8081/tcp":  [{ "HostPort": "%p" }] } } 
+    },
+    "dockerPull" : false
+  }
 }

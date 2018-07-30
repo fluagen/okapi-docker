@@ -14,11 +14,12 @@ At the moment,The docker was tested through in the following modules version:
 
 | module          | version |
 |-----------------|---------|
-| okapi-core      | 2.3.3   |
-| mod-users       | 14.3.0  |
-| mod-login       | 4.0.1   |
-| mod-permissions | 5.0.1   |
-| mod-authtoken   | 1.1.1   |
+| okapi-core      |	2.16.1  |
+| mod-users       | 15.1.0  |
+| mod-login       | 4.1.0   |
+| mod-permissions | 5.3.0   |
+| mod-authtoken   | 1.5.1   |
+| mod-users-bl    | 3.0.0   |
 
 
 ## How to use this image

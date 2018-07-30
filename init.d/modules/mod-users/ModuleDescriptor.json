@@ -1,10 +1,10 @@
 {
-  "id": "mod-users-14.3.0-SNAPSHOT",
+  "id": "mod-users-15.1.0-SNAPSHOT",
   "name": "users",
   "provides": [
     {
       "id": "users",
-      "version": "14.1",
+      "version": "15.0",
       "handlers" : [
         {
           "methods": [ "GET" ],
@@ -268,5 +268,12 @@
         "proxiesfor.item.delete"
       ]
     }
-  ]
+  ],
+  "launchDescriptor": {
+    "dockerImage": "mod-users:15.1.0-SNAPSHOT",
+    "dockerArgs": {
+      "HostConfig": { "PortBindings": { "8081/tcp":  [{ "HostPort": "%p" }] } }
+    },
+    "dockerPull" : false
+  }
 }

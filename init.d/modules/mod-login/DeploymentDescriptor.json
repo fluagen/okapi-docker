@@ -1,7 +1,33 @@
 {
-  "srvcId": "mod-login-4.0.1-SNAPSHOT",
+  "srvcId": "mod-login-4.1.0-SNAPSHOT",
   "nodeId": "localhost",
   "descriptor": {
-    "exec": "java -Dport=%p -jar /app/repo/mod-login/mod-login-fat.jar -Dhttp.port=%p"
+    "exec": "java -Dport=%p -jar /app/repo/mod-login/mod-login-fat.jar -Dhttp.port=%p",
+    "env": [
+                {
+                    "name": "db.password",
+                    "value": "111111"
+                },
+                {
+                    "name": "db.database",
+                    "value": "okapi"
+                },
+                {
+                    "name": "db.port",
+                    "value": "5432"
+                },
+                {
+                    "name": "db.host",
+                    "value": "postgres"
+                },
+                {
+                    "name": "db.username",
+                    "value": "postgres"
+                },
+                {
+                    "name": "db.charset",
+                    "value": "UTF8"
+                }
+            ]
   }
 }

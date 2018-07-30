@@ -1,5 +1,5 @@
 {
-  "id": "mod-login-4.0.1-SNAPSHOT",
+  "id": "mod-login-4.1.0-SNAPSHOT",
   "name": "login",
   "provides": [
     {
@@ -88,5 +88,13 @@
         "login.item.delete"
       ]
     }
-  ]
- }
+  ],
+  "launchDescriptor": {
+    "dockerImage": "mod-login:4.1.0-SNAPSHOT",
+    "dockerArgs": {
+      "HostConfig": { "PortBindings": { "8081/tcp":  [{ "HostPort": "%p" }] } } 
+    },
+    "dockerCMD": [ "verify.user=true" ],
+    "dockerPull": false
+  }
+}
