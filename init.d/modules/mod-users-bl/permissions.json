@@ -1,9 +1,0 @@
-{
-  "userId":"7261ecaae3a74dc68b468e12a70b1aec",
-  "permissions":[
-  	"perms.all",
-  	"login.all",
-    "users.all",
-    "users-bl.all"
-    ]
-}
